@@ -1,3 +1,4 @@
+
 const fs = require('fs');
 const path = require('path');
 
@@ -39,10 +40,10 @@ const controller = {
 	
 	// Create -  Method to store
 	store: (req, res) => {
-
+		
 		let products = readProducts();
 
-		const {name,price,discount,description,category} = req.body
+		const {name,price,discount,description,category} = req.body;
 
 		let newProduct = {
 			id : products[products.length - 1].id + 1,
@@ -50,7 +51,7 @@ const controller = {
 			description : description.trim(),
 			price : +price,
 			discount : +discount,
-			image : "default-image.png",
+			image : req.file ? req.file.filename : "default-image.png",
 			category
 
 		}
@@ -72,16 +73,20 @@ const controller = {
 	},
 	// Update - Method to update
 	update: (req, res) => {
+		let products = readProducts();
 		const {name,price,discount,description,category} = req.body;
+
+		const product = products.find(product => product.id === +req.params.id)
 
 		const productsModify = products.map(product => {
 			if(product.id === +req.params.id){
 				let productModify = {
 					...product,
-					name : name.trim,
+					name : name.trim(),
 					price : +price,
 					discount : +discount,
 					description : description.trim(),
+					image : req.file ? req.file.filename : product.image,
 					category
 
 				}
@@ -90,8 +95,13 @@ const controller = {
 
 			return product
 
+		});
 
-		})
+		if(req.file && product.image !== "default-image.png"){
+			if(fs.existsSync('./public/images/products/' + product.image)){
+		fs.unlinkSync('./public/images/products/' + product.image)
+	}
+}
 		saveProducts(productsModify);
 		
 		return res.redirect ('/products');

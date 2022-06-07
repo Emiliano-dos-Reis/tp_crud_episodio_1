@@ -127,7 +127,6 @@
    },
    {
       "id": 15,
-      "name": "Bicicleta Mountain Bike Fierce Rodado 29",
       "description": "Bicicleta Mountain Bike Fierce Rodado 29 21 velocidades. Tipo: Mountain Bike. Rodado: 29. Material Cuadro: Aluminio. Talle: 18. Suspensión: Delantera. Velocidades: 21 - Shimano. Sistema de Freno: Disco Mecánico. Llantas: Doble pared.",
       "price": 15979,
       "discount": 12,
@@ -142,5 +141,14 @@
       "category": "in-sale",
       "description": "Deja que la música dance cobre vida con EXTRA BASS™ Anima el ambiente con EXTRA BASS™1. Un radiador pasivo trabaja con el parlante monoaural para potenciar los tonos bajos y mejorar los graves, a pesar del tamaño compacto. ",
       "image": "img-parlante-sony.jpg"
+   },
+   {
+      "id": 18,
+      "description": "- Primer termo que calienta el agua.\r\n- Doble capa de acero inoxidable con aislación de vacío (18/8)\r\n- Capacidad de 1 L.\r\n- 2 temperaturas de corte: “MATE” en 75°C y “MÁX” en 90°C\r\n- 700W de potencia\r\n- Indicador luminoso de temperatura.\r\n- Tapón cebador con cierre antigoteo.\r\n- Tapa mate térmica de acero inoxidable, conserva la temperatura durante toda la cebada y logra que la yerba se lave menos.\r\n- Bombilla de acero inoxidable, que no se tapa y de fácil limpieza.\r\n- Incluye cable de alimentación extraíble, para calentar el agua donde quieras en 6 minutos.\r\n- Medidas: Alto: 33 cm / Ancho: 12 cm / Prof: 12 cm.\r\n- Cuerpo de acero inoxidable\r\n- Libre de PBA\r\n- Origen China",
+      "price": 14000,
+      "discount": 15,
+      "image": "1654570819891_products_.jfif",
+      "category": "in-sale",
+      "name": "Peabody Pe-et1000n E-termo 1 Litro 2 Temperaturas - Negro"
    }
 ]
